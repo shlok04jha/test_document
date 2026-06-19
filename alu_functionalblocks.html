@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Functional Blocks &#8212; ALU Documentation 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ALU Architecture" href="alu_architecture.html" />
+    <link rel="prev" title="Ports Description" href="alu_ports.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="functional-blocks">
+<h1>Functional Blocks<a class="headerlink" href="#functional-blocks" title="Link to this heading">¶</a></h1>
+<p>The ALU consists of four major blocks.</p>
+<section id="shared-adder">
+<h2>Shared Adder<a class="headerlink" href="#shared-adder" title="Link to this heading">¶</a></h2>
+<p>The shared adder performs:</p>
+<ul class="simple">
+<li><p>Addition</p></li>
+<li><p>Subtraction</p></li>
+<li><p>Signed comparisons</p></li>
+<li><p>Unsigned comparisons</p></li>
+</ul>
+<p>Instead of using separate hardware for addition and subtraction,
+the ALU uses a single adder.</p>
+<p>Subtraction is performed using two’s complement arithmetic:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">-</span> <span class="n">B</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="p">(</span><span class="o">~</span><span class="n">B</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="shifter">
+<h2>Shifter<a class="headerlink" href="#shifter" title="Link to this heading">¶</a></h2>
+<p>The shifter performs:</p>
+<ul class="simple">
+<li><p>Logical Left Shift (SLL)</p></li>
+<li><p>Logical Right Shift (SRL)</p></li>
+<li><p>Arithmetic Right Shift (SRA)</p></li>
+</ul>
+<p>For left shifts, operand bits are first reversed and then shifted.</p>
+</section>
+<section id="comparator">
+<h2>Comparator<a class="headerlink" href="#comparator" title="Link to this heading">¶</a></h2>
+<p>The comparator supports:</p>
+<p>Equality Operations</p>
+<ul class="simple">
+<li><p>ALU_EQ</p></li>
+<li><p>ALU_NE</p></li>
+</ul>
+<p>Unsigned Comparisons</p>
+<ul class="simple">
+<li><p>ALU_GTU</p></li>
+<li><p>ALU_GEU</p></li>
+<li><p>ALU_LTU</p></li>
+<li><p>ALU_LEU</p></li>
+</ul>
+<p>Signed Comparisons</p>
+<ul class="simple">
+<li><p>ALU_GTS</p></li>
+<li><p>ALU_GES</p></li>
+<li><p>ALU_LTS</p></li>
+<li><p>ALU_LES</p></li>
+</ul>
+</section>
+<section id="result-multiplexer">
+<h2>Result Multiplexer<a class="headerlink" href="#result-multiplexer" title="Link to this heading">¶</a></h2>
+<p>The final output is selected according to operator_i.</p>
+<p>Supported operations include:</p>
+<ul class="simple">
+<li><p>ADD</p></li>
+<li><p>SUB</p></li>
+<li><p>AND</p></li>
+<li><p>OR</p></li>
+<li><p>XOR</p></li>
+<li><p>SLL</p></li>
+<li><p>SRL</p></li>
+<li><p>SRA</p></li>
+<li><p>EQ</p></li>
+<li><p>NE</p></li>
+<li><p>GT</p></li>
+<li><p>GE</p></li>
+<li><p>LT</p></li>
+<li><p>LE</p></li>
+<li><p>SLT</p></li>
+<li><p>SLE</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ALU Documentation</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="alu_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_moduledeclaration.html">Module Declaration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_ports.html">Ports Description</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Functional Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#shared-adder">Shared Adder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shifter">Shifter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparator">Comparator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#result-multiplexer">Result Multiplexer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alu_architecture.html">ALU Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_operations.html">Supported Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_designfeatures.html">Design Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_conclusions.html">Conclusion</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="alu_ports.html" title="previous chapter">Ports Description</a></li>
+      <li>Next: <a href="alu_architecture.html" title="next chapter">ALU Architecture</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Shlok Jha.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/alu_functionalblocks.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

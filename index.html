@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ALU Documentation &#8212; ALU Documentation 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="alu_intro.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="alu-documentation">
+<h1>ALU Documentation<a class="headerlink" href="#alu-documentation" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="alu_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_moduledeclaration.html">Module Declaration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_ports.html">Ports Description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alu_ports.html#inputs">Inputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_ports.html#outputs">Outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alu_functionalblocks.html">Functional Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alu_functionalblocks.html#shared-adder">Shared Adder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_functionalblocks.html#shifter">Shifter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_functionalblocks.html#comparator">Comparator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_functionalblocks.html#result-multiplexer">Result Multiplexer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alu_architecture.html">ALU Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alu_architecture.html#internal-blocks">Internal Blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_architecture.html#architecture-diagram">Architecture Diagram</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alu_operations.html">Supported Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alu_operations.html#arithmetic">Arithmetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_operations.html#logical">Logical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_operations.html#shift">Shift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alu_operations.html#comparison">Comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="alu_designfeatures.html">Design Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_conclusions.html">Conclusion</a></li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">ALU Documentation</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="alu_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_moduledeclaration.html">Module Declaration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_ports.html">Ports Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_functionalblocks.html">Functional Blocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_architecture.html">ALU Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_operations.html">Supported Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_designfeatures.html">Design Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alu_conclusions.html">Conclusion</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="alu_intro.html" title="next chapter">Introduction</a></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Shlok Jha.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 9.1.0</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
